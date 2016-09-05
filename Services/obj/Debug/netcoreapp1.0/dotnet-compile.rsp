@@ -1,5 +1,5 @@
---temp-output:/Users/KristjanPatrekur/Desktop/CoursesAPI/Services/obj/Debug/netcoreapp1.0/
---out:/Users/KristjanPatrekur/Desktop/CoursesAPI/Services/bin/Debug/netcoreapp1.0/Services.dll
+--temp-output:/Users/KristjanPatrekur/Desktop/HR/2016-Haustonn/Vefþjónustur/Assignment2/CoursesAPI/Services/obj/Debug/netcoreapp1.0/
+--out:/Users/KristjanPatrekur/Desktop/HR/2016-Haustonn/Vefþjónustur/Assignment2/CoursesAPI/Services/bin/Debug/netcoreapp1.0/Services.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -115,8 +115,9 @@
 --reference:/Users/KristjanPatrekur/.nuget/packages/System.Threading.Timer/4.0.1/ref/netstandard1.2/System.Threading.Timer.dll
 --reference:/Users/KristjanPatrekur/.nuget/packages/System.Xml.ReaderWriter/4.0.11/ref/netstandard1.3/System.Xml.ReaderWriter.dll
 --reference:/Users/KristjanPatrekur/.nuget/packages/System.Xml.XDocument/4.0.11/ref/netstandard1.3/System.Xml.XDocument.dll
---reference:/Users/KristjanPatrekur/Desktop/CoursesAPI/Models/bin/Debug/netstandard1.6/Models.dll
-/Users/KristjanPatrekur/Desktop/CoursesAPI/Services/AppDataContext.cs
-/Users/KristjanPatrekur/Desktop/CoursesAPI/Services/CoursesService.cs
-/Users/KristjanPatrekur/Desktop/CoursesAPI/Services/ICoursesService.cs
-/Users/KristjanPatrekur/Desktop/CoursesAPI/Services/Entities/Course.cs
+--reference:/Users/KristjanPatrekur/Desktop/HR/2016-Haustonn/Vefþjónustur/Assignment2/CoursesAPI/Models/bin/Debug/netstandard1.6/Models.dll
+/Users/KristjanPatrekur/Desktop/HR/2016-Haustonn/Vefþjónustur/Assignment2/CoursesAPI/Services/AppDataContext.cs
+/Users/KristjanPatrekur/Desktop/HR/2016-Haustonn/Vefþjónustur/Assignment2/CoursesAPI/Services/CoursesService.cs
+/Users/KristjanPatrekur/Desktop/HR/2016-Haustonn/Vefþjónustur/Assignment2/CoursesAPI/Services/ICoursesService.cs
+/Users/KristjanPatrekur/Desktop/HR/2016-Haustonn/Vefþjónustur/Assignment2/CoursesAPI/Services/Entities/Course.cs
+/Users/KristjanPatrekur/Desktop/HR/2016-Haustonn/Vefþjónustur/Assignment2/CoursesAPI/Services/Entities/CourseTemplate.cs

@@ -13,27 +13,23 @@ namespace CoursesAPI.API.Controllers
     public class CoursesController : Controller
     {   
         private readonly ICoursesService _service;
-
+        
         public CoursesController(ICoursesService service) 
         {
             _service = service;
         }
 
         [HttpGet]
-        public List<CourseLiteDTO> GetCoursesBySemester(string semester = null)
-        {
-            return _service.GetCoursesBySemester(semester);
-            /*
-            return new List<CourseLiteDTO>
+        public IActionResult GetCoursesBySemester(string semester = null)
+        {   
+            var courses = _service.GetCoursesBySemester(semester); 
+            
+            if(courses == null)
             {
-                new CourseLiteDTO 
-                {
-                    ID = 1,
-                    Name = "Web services",
-                    Semester = "20163" 
-                }
-            };
-            */
+                return NotFound();
+            }
+
+            return Ok(_service.GetCoursesBySemester(semester));
         }
     }
 }
