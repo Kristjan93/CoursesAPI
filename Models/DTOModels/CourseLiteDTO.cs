@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CoursesAPI.Models
+namespace CoursesAPI.Models.DTOModels
 {
     public class CourseLiteDTO
     {

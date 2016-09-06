@@ -1,19 +1,17 @@
 using System;
 
-namespace CoursesAPI.Services.Entities
+namespace CoursesAPI.Models.DTOModels
 {
-    public class Course 
+    public class CreatedCourseDTO
     {
         public int ID { get; set; }
-
+        
         public string CourseID { get; set; }
 
         public DateTime StartDate { get; set; }
 
         public DateTime EndDate { get; set; }
-
-        public DateTime DateCreated { get; set; }
-
+        
         public string Semester { get; set; }
     }
 }

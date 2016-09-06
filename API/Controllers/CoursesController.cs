@@ -4,8 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-using CoursesAPI.Models;
+using CoursesAPI.Models.ViewModels;
+using CoursesAPI.Models.DTOModels;
 using CoursesAPI.Services;
+
 
 namespace CoursesAPI.API.Controllers
 {
@@ -18,6 +20,20 @@ namespace CoursesAPI.API.Controllers
         {
             _service = service;
         }
+        
+        [HttpPost]
+        public IActionResult CreateCourse([FromBody] CreateCourseViewModel course)
+        {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            var creCourse = _service.CreateCourse(course);
+            var location = Url.Link("GetCourseById", new { id = creCourse.ID });
+
+            return Created(location, creCourse);
+        }
 
         [HttpGet]
         public IActionResult GetCoursesBySemester(string semester = null)
@@ -29,7 +45,54 @@ namespace CoursesAPI.API.Controllers
                 return NotFound();
             }
 
-            return Ok(_service.GetCoursesBySemester(semester));
+            return Ok(courses);
+        }
+
+        [HttpGet]
+        [Route("{id:int}", Name="GetCourseById")]
+        public IActionResult GetCourseById(int id)
+        {   
+            var course = _service.GetCourseById(id); 
+            
+            if(course == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(course);
+        }
+
+        [HttpPut]
+        [Route("{id:int}")]
+        public IActionResult modifyCourse(int id, [FromBody] modifyCourseViewModel course)
+        {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            bool wasUpdated = _service.modifyCourse(id, course);
+
+            if(wasUpdated == false)
+            {
+                return NotFound();
+            }
+
+            return Ok();
+        }
+
+        [HttpDelete]
+        [Route("{id:int}")]
+        public IActionResult deleteCourse(int id)
+        {
+            bool wasDeleted = _service.deleteCourse(id);
+
+            if(wasDeleted == false)
+            {
+                return NotFound();
+            }
+
+            return new NoContentResult();
         }
     }
 }

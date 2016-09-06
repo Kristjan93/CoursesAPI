@@ -9,5 +9,7 @@ namespace CoursesAPI.Services.Entities
         public string Name { get; set; }
 
         public string CourseID { get; set; }
+
+        public int Credits { get; set; }
     }
 }
