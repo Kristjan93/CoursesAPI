@@ -56,5 +56,8 @@
 "/Users/KristjanPatrekur/Desktop/HR/2016-Haustonn/Vefþjónustur/Assignment2/CoursesAPI/Models/DTOModels/CourseDetailsDTO.cs"
 "/Users/KristjanPatrekur/Desktop/HR/2016-Haustonn/Vefþjónustur/Assignment2/CoursesAPI/Models/DTOModels/CourseLiteDTO.cs"
 "/Users/KristjanPatrekur/Desktop/HR/2016-Haustonn/Vefþjónustur/Assignment2/CoursesAPI/Models/DTOModels/CreatedCourseDTO.cs"
+"/Users/KristjanPatrekur/Desktop/HR/2016-Haustonn/Vefþjónustur/Assignment2/CoursesAPI/Models/DTOModels/SetStudentDTO.cs"
+"/Users/KristjanPatrekur/Desktop/HR/2016-Haustonn/Vefþjónustur/Assignment2/CoursesAPI/Models/DTOModels/StudentLiteDTO.cs"
 "/Users/KristjanPatrekur/Desktop/HR/2016-Haustonn/Vefþjónustur/Assignment2/CoursesAPI/Models/ViewModels/CreateCourseViewModel.cs"
 "/Users/KristjanPatrekur/Desktop/HR/2016-Haustonn/Vefþjónustur/Assignment2/CoursesAPI/Models/ViewModels/modifyCourseViewModel.cs"
+"/Users/KristjanPatrekur/Desktop/HR/2016-Haustonn/Vefþjónustur/Assignment2/CoursesAPI/Models/ViewModels/SetStudentViewModel.cs"

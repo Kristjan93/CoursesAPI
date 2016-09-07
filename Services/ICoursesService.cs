@@ -8,6 +8,7 @@ namespace CoursesAPI.Services
 {
     public interface ICoursesService
     {
+        
         List<CourseLiteDTO> GetCoursesBySemester(string semester);
 
         CourseDetailsDTO GetCourseById(int id);
@@ -17,5 +18,9 @@ namespace CoursesAPI.Services
         bool modifyCourse(int id, modifyCourseViewModel course);
 
         bool deleteCourse(int id);
+        
+        List<StudentLiteDTO> GetCourseStudentsByCourseId(int id);
+
+        SetStudentDTO SetStudentToCourse(int courseId, SetStudentViewModel student);
     }
 }

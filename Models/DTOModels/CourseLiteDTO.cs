@@ -19,9 +19,14 @@ namespace CoursesAPI.Models.DTOModels
         /// The semester tells the time during which the course holds classes.
         /// The form of the value is " year + semester".
         /// Values for "semester" and it's representation can be 1: spring, 2:summer and 3:fall.
-        /// Example: "20151": course holds classes in the  spring 2015
+        /// <example>Semester: "20151", course holds classes in the  spring 2015</example>
         /// /// </summary>
         public string Semester { get; set; }
-        
+
+        /// <summary>
+        /// NumberOfStudents stores how many students are enrolled in a course.
+        /// </summary>
+        /// <returns></returns>
+        public int NumberOfStudents { get; set; }
     }
 }

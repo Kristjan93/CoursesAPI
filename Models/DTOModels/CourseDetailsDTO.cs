@@ -1,24 +1,52 @@
 using System;
+using System.Collections.Generic;
 
 namespace CoursesAPI.Models.DTOModels
 {
+    /// <summary>
+    /// Course-Details-DTO represents a more detailed information given from the api.
+    /// </summary>
     public class CourseDetailsDTO
     {
         /// <summary>
-        /// Database-genarated ID of the course.
+        /// Database generated auto-incremented identifier.
         /// </summary>
         public int ID { get; set; }
 
-        public string CourseID { get; set; }
+        /// <summary>
+        /// Name of the CourseTemplate.
+        /// <example>
+        /// TemplateName: "T-111-PROG"  
+        /// TemplateName: "T-514-VEFT"
+        /// </example>
+        /// </summary>
+        public string TemplateName { get; set; }
 
         /// <summary>
-        /// The Name of the course.
-        /// Example: "Web services"
+        /// CourseName represent names of courses associated with each courses instance.
         /// </summary>
-        public string Name { get; set; }
+        public string CourseName { get; set; }
+
+        /// <summary>
+        /// Credits is a numeric value representing how many points a course will give
+        /// when passed.
+        /// <example>
+        /// Credits: 6
+        /// Credits: 12
+        /// </example>
+        /// </summary>
         public int Credits { get; set; }
 
+        /// <summary>
+        /// Start-Date represents when a course starts
+        /// <example>StartDate: "2016-08-06T10:21:56.761901+00:00"</example>
+        /// </summary>
         public DateTime StartDate { get; set; }
+        
+        /// <summary>
+        /// End-Date represents when a course ends
+        /// <example>EndDate: "2016-12-06T10:21:56.761901+00:00"</example>
+        /// </summary>
         public DateTime EndDate { get; set; }
 
         /// <summary>
@@ -28,6 +56,8 @@ namespace CoursesAPI.Models.DTOModels
         /// Example: "20151": course holds classes in the  spring 2015
         /// /// </summary>
         public string Semester { get; set; }
+
+        public List<StudentLiteDTO> Students { get; set; }
         
     }
 }
